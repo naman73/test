@@ -9,6 +9,10 @@ body{
     background-color: rgb(67, 5, 126);;
 }
 
+.fa-close, .fa-check-circle{
+    pointer-events: none;
+}
+
 .form-heading, .heading{
     font-size: 56px;
     color: rgb(191, 252, 49);
@@ -17,6 +21,14 @@ body{
     min-height: 15vh;
     justify-content: center;
     align-items: center;
+}
+
+.heading:hover{
+    font-size: 62px;
+    font-weight: bolder;
+    cursor: grabbing;
+    color: rgb(237, 255, 202);
+    transition: .2s;
 }
 
 .todo-input, .sub-btn{
@@ -40,4 +52,61 @@ body{
 
 .container{
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list{
+    list-style: none;
+    width: 500px;
+}
+
+.todo{
+    padding: 10px;
+    margin: 15px;
+    background-color: rgb(116, 41, 187);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.todo:hover{
+    cursor: pointer;
+    transition: .5s;
+    border-radius: 0px;
+    color: black;
+    font-weight: bolder;
+    background-color: rgb(205, 179, 223);
+}
+
+.todo li{
+    flex: 1;
+}
+
+.done-btn{
+    background-color: rgb(66, 146, 97);
+    border: none;
+    border-radius: 3px;
+    padding: 7px;
+    margin: 3px;
+    cursor: pointer;
+}
+
+.delete-btn{
+    cursor: pointer;
+    background-color: rgb(228, 115, 115);
+    border: none;
+    border-radius: 3px;
+    padding: 7px;
+    margin: 3px;
+}
+
+.completed{
+    text-decoration: line-through;
+    opacity: 60%;
 }
